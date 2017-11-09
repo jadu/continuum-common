@@ -2,7 +2,6 @@
 
 namespace Jadu\ContinuumCommon\Address\Model;
 
-use DateTime;
 use Jadu\ContinuumCommon\Address\AddressInterface;
 use Jadu\ContinuumCommon\Address\Formatter\AddressSummaryFormatter;
 
@@ -17,16 +16,6 @@ class Address implements AddressInterface
      * @var string
      */
     private $saon;
-
-    /**
-     * @var string
-     */
-    private $uprn;
-
-    /**
-     * @var string
-     */
-    private $usrn;
 
     /**
      * @var string
@@ -46,11 +35,6 @@ class Address implements AddressInterface
     /**
      * @var string
      */
-    private $administrativeArea;
-
-    /**
-     * @var string
-     */
     private $postTown;
 
     /**
@@ -59,35 +43,9 @@ class Address implements AddressInterface
     private $postCode;
 
     /**
-     * @var int
-     */
-    private $easting;
-
-    /**
-     * @var int
-     */
-    private $northing;
-
-    /**
      * @var string
      */
     private $type;
-
-    /**
-     * @var DateTime
-     */
-    private $createdAt;
-
-    /**
-     * @var DateTime
-     */
-    private $updatedAt;
-
-    public function __construct()
-    {
-        $this->createdAt = new DateTime();
-        $this->updatedAt = new DateTime();
-    }
 
     /**
      * Set paon.
@@ -107,26 +65,6 @@ class Address implements AddressInterface
     public function setSaon($saon)
     {
         $this->saon = $saon;
-    }
-
-    /**
-     * Set uprn.
-     *
-     * @param string $uprn
-     */
-    public function setUprn($uprn)
-    {
-        $this->uprn = $uprn;
-    }
-
-    /**
-     * Set usrn.
-     *
-     * @param string $usrn
-     */
-    public function setUsrn($usrn)
-    {
-        $this->usrn = $usrn;
     }
 
     /**
@@ -160,16 +98,6 @@ class Address implements AddressInterface
     }
 
     /**
-     * Set administrativeArea.
-     *
-     * @param string $administrativeArea
-     */
-    public function setAdministrativeArea($administrativeArea)
-    {
-        $this->administrativeArea = $administrativeArea;
-    }
-
-    /**
      * Set postTown.
      *
      * @param string $postTown
@@ -190,26 +118,6 @@ class Address implements AddressInterface
     }
 
     /**
-     * Set easting.
-     *
-     * @param int $easting
-     */
-    public function setEasting($easting)
-    {
-        $this->easting = $easting;
-    }
-
-    /**
-     * Set northing.
-     *
-     * @param int $northing
-     */
-    public function setNorthing($northing)
-    {
-        $this->northing = $northing;
-    }
-
-    /**
      * @param string $type
      */
     public function setType($type)
@@ -218,29 +126,7 @@ class Address implements AddressInterface
     }
 
     /**
-     * Set createdAt.
-     *
-     * @param DateTime $createdAt
-     */
-    public function setCreatedAt(DateTime $createdAt)
-    {
-        $this->createdAt = $createdAt;
-    }
-
-    /**
-     * Set updatedAt.
-     *
-     * @param DateTime $updatedAt
-     */
-    public function setUpdatedAt(DateTime $updatedAt)
-    {
-        $this->updatedAt = $updatedAt;
-    }
-
-    /**
-     * Get paon (building number / name).
-     *
-     * @return string
+     * {@inheritdoc}
      */
     public function getPaon()
     {
@@ -248,9 +134,7 @@ class Address implements AddressInterface
     }
 
     /**
-     * Get saon.
-     *
-     * @return string
+     * {@inheritdoc}
      */
     public function getSaon()
     {
@@ -258,29 +142,7 @@ class Address implements AddressInterface
     }
 
     /**
-     * Get uprn.
-     *
-     * @return string
-     */
-    public function getUprn()
-    {
-        return $this->uprn;
-    }
-
-    /**
-     * Get usrn.
-     *
-     * @return string
-     */
-    public function getUsrn()
-    {
-        return $this->usrn;
-    }
-
-    /**
-     * Get street.
-     *
-     * @return string
+     * {@inheritdoc}
      */
     public function getStreet()
     {
@@ -288,9 +150,7 @@ class Address implements AddressInterface
     }
 
     /**
-     * Get locality.
-     *
-     * @return string
+     * {@inheritdoc}
      */
     public function getLocality()
     {
@@ -298,9 +158,7 @@ class Address implements AddressInterface
     }
 
     /**
-     * Get town.
-     *
-     * @return string
+     * {@inheritdoc}
      */
     public function getTown()
     {
@@ -308,19 +166,7 @@ class Address implements AddressInterface
     }
 
     /**
-     * Get administrativeArea.
-     *
-     * @return string
-     */
-    public function getAdministrativeArea()
-    {
-        return $this->administrativeArea;
-    }
-
-    /**
-     * Get postTown.
-     *
-     * @return string
+     * {@inheritdoc}
      */
     public function getPostTown()
     {
@@ -328,9 +174,7 @@ class Address implements AddressInterface
     }
 
     /**
-     * Get postCode.
-     *
-     * @return string
+     * {@inheritdoc}
      */
     public function getPostCode()
     {
@@ -338,51 +182,11 @@ class Address implements AddressInterface
     }
 
     /**
-     * Get easting.
-     *
-     * @return int
-     */
-    public function getEasting()
-    {
-        return $this->easting;
-    }
-
-    /**
-     * Get northing.
-     *
-     * @return int
-     */
-    public function getNorthing()
-    {
-        return $this->northing;
-    }
-
-    /**
-     * @return string
+     * {@inheritdoc}
      */
     public function getType()
     {
         return $this->type;
-    }
-
-    /**
-     * Get createdAt.
-     *
-     * @return DateTime
-     */
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
-    }
-
-    /**
-     * Get updatedAt.
-     *
-     * @return DateTime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->updatedAt;
     }
 
     /**
