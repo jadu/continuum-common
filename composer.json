@@ -1,0 +1,34 @@
+{
+    "name": "jadu/continuum-common",
+    "type": "library",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://toran-proxy.hq.jadu.net/repo/private/"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jadu\\ContinuumCommon\\": "src/"
+        }
+    },
+    "require-dev": {
+        "jadu/php-style": "^1.0",
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "phpunit/phpunit": "~5.7",
+        "mockery/mockery": "~1.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jadu\\ContinuumCommon\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "5.6"
+        }
+    }
+}
