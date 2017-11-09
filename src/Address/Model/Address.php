@@ -48,7 +48,7 @@ class Address implements AddressInterface
     private $type;
 
     /**
-     * Set paon.
+     * Set PAON.
      *
      * @param string $paon
      */
@@ -58,7 +58,7 @@ class Address implements AddressInterface
     }
 
     /**
-     * Set saon (e.g. flat number).
+     * Set SAON (e.g. flat number).
      *
      * @param string $saon
      */
@@ -98,7 +98,7 @@ class Address implements AddressInterface
     }
 
     /**
-     * Set postTown.
+     * Set postal town.
      *
      * @param string $postTown
      */
@@ -108,7 +108,7 @@ class Address implements AddressInterface
     }
 
     /**
-     * Set postCode.
+     * Set postal code.
      *
      * @param string $postCode
      */
