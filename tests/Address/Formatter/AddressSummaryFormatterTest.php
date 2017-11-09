@@ -111,6 +111,21 @@ class AddressSummaryFormatterTest extends AbstractTestCase
         $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
     }
 
+    public function testGenerateFromAddressAppliesTitleCaseCorrectlyForAllCapitals()
+    {
+        $address = new Address();
+        $address->setPaon('MY HOUSE');
+        $address->setSaon('FLAT EE7');
+        $address->setStreet('MAIN STREET');
+        $address->setTown('LEICESTER');
+        $address->setPostCode('LE1 3EN');
+        $address->setType(AddressInterface::TYPE_PROPERTY);
+
+        $expected = 'FLAT EE7, MY HOUSE, Main Street, Leicester, LE1 3EN';
+
+        $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
+    }
+
     public function testGenerateStreetAddressDoesntIncludeHouseNumbers()
     {
         $address = new Address();
