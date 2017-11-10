@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "php": ">=5.6"
+        "php": ">=5.5"
     },
     "autoload": {
         "psr-4": {
@@ -24,11 +24,6 @@
     "autoload-dev": {
         "psr-4": {
             "Jadu\\ContinuumCommon\\Tests\\": "tests/"
-        }
-    },
-    "config": {
-        "platform": {
-            "php": "5.6"
         }
     }
 }
