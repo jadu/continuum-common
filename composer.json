@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "php": ">=5.5"
+        "php": ">=5.5.9"
     },
     "autoload": {
         "psr-4": {
@@ -16,14 +16,18 @@
         }
     },
     "require-dev": {
-        "jadu/php-style": "^1.0",
-        "friendsofphp/php-cs-fixer": "^2.0",
+        "friendsofphp/php-cs-fixer": "*",
         "phpunit/phpunit": "~4.8",
         "mockery/mockery": "~0.9.0"
     },
     "autoload-dev": {
         "psr-4": {
             "Jadu\\ContinuumCommon\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "5.5.9"
         }
     }
 }
