@@ -2,11 +2,10 @@
 
 namespace Jadu\ContinuumCommon\Address\Model;
 
-use Jadu\ContinuumCommon\Address\AddressHydratorInterface;
-use Jadu\ContinuumCommon\Address\AddressSummaryInterface;
+use Jadu\ContinuumCommon\Address\Contract\AddressInterface;
 use Jadu\ContinuumCommon\Address\Formatter\AddressSummaryFormatter;
 
-class Address implements AddressHydratorInterface, AddressSummaryInterface
+class Address implements AddressInterface
 {
     /**
      * @var string

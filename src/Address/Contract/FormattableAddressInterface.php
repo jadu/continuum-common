@@ -1,8 +1,8 @@
 <?php
 
-namespace Jadu\ContinuumCommon\Address;
+namespace Jadu\ContinuumCommon\Address\Contract;
 
-interface AddressSummaryInterface
+interface FormattableAddressInterface
 {
     /**
      * Get PAON (building number / name).

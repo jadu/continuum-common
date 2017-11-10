@@ -1,8 +1,8 @@
 <?php
 
-namespace Jadu\ContinuumCommon\Address;
+namespace Jadu\ContinuumCommon\Address\Contract;
 
-interface AddressHydratorInterface
+interface HydratableAddressInterface
 {
     /**
      * Set PAON.

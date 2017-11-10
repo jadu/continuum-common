@@ -2,7 +2,7 @@
 
 namespace Jadu\ContinuumCommon\Tests\Address\Formatter;
 
-use Jadu\ContinuumCommon\Address\AddressInterface;
+use Jadu\ContinuumCommon\Address\Contract\AddressInterface;
 use Jadu\ContinuumCommon\Address\Formatter\AddressSummaryFormatter;
 use Jadu\ContinuumCommon\Address\Model\Address;
 use PHPUnit_Framework_TestCase as AbstractTestCase;

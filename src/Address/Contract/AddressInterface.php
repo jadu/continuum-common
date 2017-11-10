@@ -1,8 +1,8 @@
 <?php
 
-namespace Jadu\ContinuumCommon\Address;
+namespace Jadu\ContinuumCommon\Address\Contract;
 
-interface AddressInterface
+interface AddressInterface extends FormattableAddressInterface, HydratableAddressInterface
 {
     /**
      * @var string

@@ -2,17 +2,17 @@
 
 namespace Jadu\ContinuumCommon\Address\Formatter;
 
-use Jadu\ContinuumCommon\Address\AddressInterface;
-use Jadu\ContinuumCommon\Address\AddressSummaryInterface;
+use Jadu\ContinuumCommon\Address\Contract\AddressInterface;
+use Jadu\ContinuumCommon\Address\Contract\FormattableAddressInterface;
 
 class AddressSummaryFormatter
 {
     /**
-     * @param AddressSummaryInterface $address
+     * @param FormattableAddressInterface $address
      *
      * @return string
      */
-    public static function generateFromAddress(AddressSummaryInterface $address)
+    public static function generateFromAddress(FormattableAddressInterface $address)
     {
         $summaryParts = [];
 
