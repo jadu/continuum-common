@@ -3,15 +3,16 @@
 namespace Jadu\ContinuumCommon\Address\Formatter;
 
 use Jadu\ContinuumCommon\Address\AddressInterface;
+use Jadu\ContinuumCommon\Address\AddressSummaryInterface;
 
 class AddressSummaryFormatter
 {
     /**
-     * @param AddressInterface $address
+     * @param AddressSummaryInterface $address
      *
      * @return string
      */
-    public static function generateFromAddress(AddressInterface $address)
+    public static function generateFromAddress(AddressSummaryInterface $address)
     {
         $summaryParts = [];
 
