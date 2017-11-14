@@ -3,11 +3,11 @@
 namespace Jadu\ContinuumCommon\User;
 
 /**
-* Provides a number of methods to store, retrieve and edit users.
-*
-* @copyright All Contents (c) 2017 Jadu Ltd.
-* @author Jadu Ltd.
-*/
+ * Provides a number of methods to store, retrieve and edit users.
+ *
+ * @copyright All Contents (c) 2017 Jadu Ltd.
+ * @author Jadu Ltd.
+ */
 interface UserServiceInterface
 {
     /**
@@ -16,18 +16,21 @@ interface UserServiceInterface
      * @return UserServiceInterface
      */
     public static function getInstance();
+
     /**
      * Get the adapter.
      *
      * @return AdapterInterface
      */
     public function getAdapter();
+
     /**
      * Returns the logged in User.
      *
      * @return UserInterface
      */
     public function getSessionUser();
+
     /**
      * Checks whether the identity and credential are correct and if so
      * logs the user in. If e-mail confirmation is turned on then an additional
@@ -43,12 +46,14 @@ interface UserServiceInterface
      * @return AuthenticationResult The authentication result
      */
     public function authenticateUser($identity, $credential, $requireEmailConfirmation = false);
+
     /**
      * Sets the user session.
      *
      * @param int $userID ID of the user
      */
     public function logSessionIn($userID, $externalID = null);
+
     /**
      * Logs a user out by destroying the session and then calls adapter specific logout method.
      *
@@ -57,72 +62,84 @@ interface UserServiceInterface
      * @return bool
      */
     public function logSessionOut($force = false);
+
     /**
      * Checks if the current session is logged in or not.
      *
      * @return bool True|False if logged in
      */
     public function isSessionLoggedIn();
+
     /**
      * Returns the session userID.
      *
      * @return mixed The user id
      */
     public function getSessionUserID();
+
     /**
      * Get the UserID.
      *
      * @return mixed UserID
      */
     public function getSessionKeyForSite();
+
     /**
      * Returns the session loginID.
      *
      * @return mixed The login id
      */
     public function getSessionLoginID();
+
     /**
      * Get the LoginID.
      *
      * @return string
      */
     public function getSessionLoginKeyForSite();
+
     /**
      * Get the LoginID.
      *
      * @return string
      */
     public function getSessionExternalIDKeyForSite();
+
     /**
      * Whether new registrations are excepted.
      *
      * @return bool
      */
     public function canRegisterUser();
+
     /**
      * Whether users can update their details from within Jadu.
      *
      * @return bool
      */
     public function canUpdateUser();
+
     /**
      * Whether users can reset password from within Jadu.
      *
      * @return bool
      */
     public function canRemindPassword();
+
     /**
      * Whether users can update their password from within Jadu.
      *
      * @return bool
      */
     public function canUpdatePassword();
+
     /**
      * Whether users can change their password from within Jadu.
      *
      * @return bool
      */
     public function canUpdateUserPassword();
+
     /**
      * Return a boolean value representing whether the user has confirmed their e-mail address.
      *
