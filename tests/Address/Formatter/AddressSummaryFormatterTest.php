@@ -76,7 +76,7 @@ class AddressSummaryFormatterTest extends AbstractTestCase
         $address->setPostCode('LE1 3EN');
         $address->setType(AddressInterface::TYPE_PROPERTY);
 
-        $expected = '12A Main Street, Leicester, LE1 3EN';
+        $expected = '12a Main Street, Leicester, LE1 3EN';
 
         $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
     }
@@ -106,7 +106,7 @@ class AddressSummaryFormatterTest extends AbstractTestCase
         $address->setPostCode('LE1 3EN');
         $address->setType(AddressInterface::TYPE_PROPERTY);
 
-        $expected = 'Flat EE7, My House, Main Street, Leicester, LE1 3EN';
+        $expected = 'Flat Ee7, My House, Main Street, Leicester, LE1 3EN';
 
         $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
     }
@@ -121,7 +121,7 @@ class AddressSummaryFormatterTest extends AbstractTestCase
         $address->setPostCode('LE1 3EN');
         $address->setType(AddressInterface::TYPE_PROPERTY);
 
-        $expected = 'FLAT EE7, MY HOUSE, Main Street, Leicester, LE1 3EN';
+        $expected = 'Flat Ee7, My House, Main Street, Leicester, LE1 3EN';
 
         $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
     }

@@ -17,8 +17,8 @@ class AddressSummaryFormatter
         $summaryParts = [];
 
         if (AddressInterface::TYPE_PROPERTY === $address->getType()) {
-            static::addPart($summaryParts, $address->getSaon());
-            static::addPart($summaryParts, $address->getPaon());
+            static::addPart($summaryParts, TitleCaseFormatter::format($address->getSaon()));
+            static::addPart($summaryParts, TitleCaseFormatter::format($address->getPaon()));
         }
 
         static::addPart($summaryParts, TitleCaseFormatter::format($address->getStreet()));
