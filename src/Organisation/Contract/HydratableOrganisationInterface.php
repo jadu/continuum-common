@@ -49,7 +49,7 @@ interface HydratableOrganisationInterface
     /**
      * @param AddressInterface $address
      */
-    public function setAddress($address);
+    public function setAddress(AddressInterface $address);
 
     /**
      * @param OrganisationMembershipInterface $member
@@ -57,19 +57,9 @@ interface HydratableOrganisationInterface
     public function addMember(OrganisationMembershipInterface $member);
 
     /**
-     * @param OrganisationMembershipInviteInterface $memberInvite
-     */
-    public function addInvitedMember(OrganisationMembershipInviteInterface $memberInvite);
-
-    /**
      * @param ArrayCollection|OrganisationMembershipInterface[] $members
      */
     public function setMembers($members);
-
-    /**
-     * @param ArrayCollection|OrganisationMembershipInviteInterface[] $invitedMembers
-     */
-    public function setInvitedMembers($invitedMembers);
 
     /**
      * @param string $registeredBusinessName
@@ -85,6 +75,7 @@ interface HydratableOrganisationInterface
      * @param string $charityReferenceNumber
      */
     public function setCharityReferenceNumber($charityReferenceNumber);
+
     /**
      * @param string $nhsOrganisationCode
      */

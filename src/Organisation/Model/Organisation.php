@@ -62,11 +62,6 @@ class Organisation implements OrganisationInterface
     private $members;
 
     /**
-     * @var ArrayCollection|OrganisationMembershipInterface[]
-     */
-    private $invitedMembers;
-
-    /**
      * @var string
      */
     private $registeredBusinessName;
@@ -217,7 +212,7 @@ class Organisation implements OrganisationInterface
     /**
      * {@inheritdoc}
      */
-    public function setAddress($address)
+    public function setAddress(AddressInterface $address)
     {
         $this->address = $address;
     }
@@ -244,36 +239,9 @@ class Organisation implements OrganisationInterface
     /**
      * {@inheritdoc}
      */
-    public function setInvitedMembers($invitedMembers)
-    {
-        $this->invitedMembers->clear();
-        foreach ($invitedMembers as $member) {
-            $this->addInvitedMember($member);
-        }
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function addInvitedMember(OrganisationMembershipInviteInterface $memberInvite)
-    {
-        $this->invitedMembers->add($memberInvite);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getMembers()
     {
         return $this->members;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getInvitedMembers()
-    {
-        return $this->invitedMembers;
     }
 
     /**

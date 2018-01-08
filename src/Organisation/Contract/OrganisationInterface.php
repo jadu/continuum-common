@@ -27,11 +27,6 @@ interface OrganisationInterface extends HydratableOrganisationInterface
     public function getMembers();
 
     /**
-     * @return ArrayCollection|OrganisationMembershipInviteInterface[]
-     */
-    public function getInvitedMembers();
-
-    /**
      * @return DateTime
      */
     public function getCreatedAt();
