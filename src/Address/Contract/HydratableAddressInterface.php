@@ -105,7 +105,7 @@ interface HydratableAddressInterface
     public function setExternalReference($externalReference);
 
     /**
-     * Set the CXM address reference.
+     * Set the address reference.
      *
      * @param string $reference
      */

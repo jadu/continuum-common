@@ -17,7 +17,7 @@ interface AddressInterface extends FormattableAddressInterface, HydratableAddres
     const TYPE_PROPERTY = 'property';
 
     /**
-     * Get the CXM address reference.
+     * Get the address reference.
      *
      * @return string
      */
