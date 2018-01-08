@@ -2,6 +2,8 @@
 
 namespace Jadu\ContinuumCommon\Address\Contract;
 
+use DateTime;
+
 interface HydratableAddressInterface
 {
     /**
@@ -101,4 +103,26 @@ interface HydratableAddressInterface
      * @param string $externalReference
      */
     public function setExternalReference($externalReference);
+
+    /**
+     * Set the CXM address reference.
+     *
+     * @param string $reference
+     */
+    public function setReference($reference);
+
+    /**
+     * @param DateTime $createdAt
+     */
+    public function setCreatedAt(DateTime $createdAt);
+
+    /**
+     * @param DateTime $updatedAt
+     */
+    public function setUpdatedAt(DateTime $updatedAt);
+
+    /**
+     * @param int $version
+     */
+    public function setVersion($version);
 }

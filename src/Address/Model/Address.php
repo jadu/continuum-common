@@ -2,9 +2,15 @@
 
 namespace Jadu\ContinuumCommon\Address\Model;
 
+use DateTime;
 use Jadu\ContinuumCommon\Address\Contract\AddressInterface;
 use Jadu\ContinuumCommon\Address\Formatter\AddressSummaryFormatter;
 
+/**
+ * Class Address
+ *
+ * @author Jadu Ltd.
+ */
 class Address implements AddressInterface
 {
     /**
@@ -76,6 +82,32 @@ class Address implements AddressInterface
      * @var string
      */
     private $externalReference;
+
+    /**
+     * @var string
+     */
+    private $reference;
+
+    /**
+     * @var DateTime
+     */
+    private $createdAt;
+
+    /**
+     * @var DateTime
+     */
+    private $updatedAt;
+
+    /**
+     * @var int
+     */
+    private $version;
+
+    public function __construct()
+    {
+        $this->setCreatedAt(new DateTime());
+        $this->setUpdatedAt(new DateTime());
+    }
 
     /**
      * {@inheritdoc}
@@ -321,5 +353,69 @@ class Address implements AddressInterface
     public function getSummary()
     {
         return AddressSummaryFormatter::generateFromAddress($this);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getReference()
+    {
+        return $this->reference;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setReference($reference)
+    {
+        $this->reference = $reference;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setCreatedAt(DateTime $createdAt)
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setUpdatedAt(DateTime $updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setVersion($version)
+    {
+        $this->version = $version;
     }
 }
