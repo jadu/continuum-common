@@ -37,4 +37,14 @@ interface AddressInterface extends FormattableAddressInterface, HydratableAddres
      * @return int
      */
     public function getVersion();
+
+    /**
+     * @return string
+     */
+    public function getUprn();
+
+    /**
+     * @return string
+     */
+    public function getUsrn();
 }

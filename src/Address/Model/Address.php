@@ -107,6 +107,7 @@ class Address implements AddressInterface
     {
         $this->setCreatedAt(new DateTime());
         $this->setUpdatedAt(new DateTime());
+        $this->version = 1;
     }
 
     /**
