@@ -16,42 +16,37 @@ class OrganisationMembership implements OrganisationMembershipInterface
     /**
      * @var DateTime
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * @var DateTime
      */
-    private $updatedAt;
+    protected $updatedAt;
 
     /**
      * @var DateTime
      */
-    private $invitedAt;
+    protected $invitedAt;
 
     /**
      * @var string
      */
-    private $role;
+    protected $role;
 
     /**
      * @var string
      */
-    private $userReference;
+    protected $email;
 
     /**
      * @var string
      */
-    private $email;
-
-    /**
-     * @var string
-     */
-    private $name;
+    protected $name;
 
     /**
      * @var OrganisationInterface
      */
-    private $organisation;
+    protected $organisation;
 
     public function __construct()
     {

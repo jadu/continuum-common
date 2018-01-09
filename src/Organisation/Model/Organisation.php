@@ -19,67 +19,67 @@ class Organisation implements OrganisationInterface
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $reference;
+    protected $reference;
 
     /**
      * @var DateTime
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * @var DateTime
      */
-    private $updatedAt;
+    protected $updatedAt;
 
     /**
      * @var string
      */
-    private $vatNumber;
+    protected $vatNumber;
 
     /**
      * @var string
      */
-    private $telephonePrimary;
+    protected $telephonePrimary;
 
     /**
      * @var string
      */
-    private $telephoneSecondary;
+    protected $telephoneSecondary;
 
     /**
      * @var AddressInterface
      */
-    private $address;
+    protected $address;
 
     /**
      * @var ArrayCollection|OrganisationMembershipInterface[]
      */
-    private $members;
+    protected $members;
 
     /**
      * @var string
      */
-    private $registeredBusinessName;
+    protected $registeredBusinessName;
 
     /**
      * @var string
      */
-    private $companyRegistrationNumber;
+    protected $companyRegistrationNumber;
 
     /**
      * @var string
      */
-    private $charityReferenceNumber;
+    protected $charityReferenceNumber;
 
     /**
      * @var string
      */
-    private $nhsOrganisationCode;
+    protected $nhsOrganisationCode;
 
     public function __construct()
     {

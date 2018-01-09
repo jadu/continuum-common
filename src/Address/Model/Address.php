@@ -16,92 +16,92 @@ class Address implements AddressInterface
     /**
      * @var string
      */
-    private $paon;
+    protected $paon;
 
     /**
      * @var string
      */
-    private $saon;
+    protected $saon;
 
     /**
      * @var string
      */
-    private $street;
+    protected $street;
 
     /**
      * @var string
      */
-    private $locality;
+    protected $locality;
 
     /**
      * @var string
      */
-    private $town;
+    protected $town;
 
     /**
      * @var string
      */
-    private $postTown;
+    protected $postTown;
 
     /**
      * @var string
      */
-    private $postCode;
+    protected $postCode;
 
     /**
      * @var string
      */
-    private $type;
+    protected $type;
 
     /**
      * @var string
      */
-    private $administrativeArea;
+    protected $administrativeArea;
 
     /**
      * @var int
      */
-    private $easting;
+    protected $easting;
 
     /**
      * @var int
      */
-    private $northing;
+    protected $northing;
 
     /**
      * @var string
      */
-    private $uprn;
+    protected $uprn;
 
     /**
      * @var string
      */
-    private $usrn;
+    protected $usrn;
 
     /**
      * @var string
      */
-    private $externalReference;
+    protected $externalReference;
 
     /**
      * @var string
      */
-    private $reference;
+    protected $reference;
 
     /**
      * @var DateTime
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * @var DateTime
      */
-    private $updatedAt;
+    protected $updatedAt;
 
     /**
      * @var int
      */
-    private $version;
+    protected $version;
 
     public function __construct()
     {
