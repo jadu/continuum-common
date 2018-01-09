@@ -24,6 +24,13 @@ interface AddressInterface extends FormattableAddressInterface, HydratableAddres
     public function getReference();
 
     /**
+     * The unique reference that the address provider uses to identify the address, if not the UPRN.
+     *
+     * @return mixed
+     */
+    public function getExternalReference();
+
+    /**
      * @return DateTime
      */
     public function getCreatedAt();
