@@ -9,7 +9,7 @@ use DateTime;
  *
  * @author Jadu Ltd.
  */
-interface OrganisationMembershipInterface extends HydratableOrganisationMembershipInterface, OrganisationMembershipRoleInterface, OrganisationMembershipStatusInterface
+interface OrganisationMembershipInterface extends HydratableOrganisationMembershipInterface
 {
     /**
      * @return string
@@ -27,11 +27,6 @@ interface OrganisationMembershipInterface extends HydratableOrganisationMembersh
     public function getOrganisation();
 
     /**
-     * @return string
-     */
-    public function getUserReference();
-
-    /**
      * @return DateTime
      */
     public function getCreatedAt();
@@ -45,4 +40,9 @@ interface OrganisationMembershipInterface extends HydratableOrganisationMembersh
      * @return DateTime
      */
     public function getInvitedAt();
+
+    /**
+     * @return string
+     */
+    public function getRole();
 }

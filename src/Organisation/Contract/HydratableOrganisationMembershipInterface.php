@@ -32,11 +32,6 @@ interface HydratableOrganisationMembershipInterface
     public function setOrganisation(OrganisationInterface $organisation);
 
     /**
-     * @param string $userReference
-     */
-    public function setUserReference($userReference);
-
-    /**
      * @param DateTime $createdAt
      */
     public function setCreatedAt(DateTime $createdAt);

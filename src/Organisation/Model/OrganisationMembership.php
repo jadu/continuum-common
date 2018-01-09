@@ -174,14 +174,6 @@ class OrganisationMembership implements OrganisationMembershipInterface
     /**
      * {@inheritdoc}
      */
-    public function getStatus()
-    {
-        return self::STATUS_REGISTERED;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getInvitedAt()
     {
         return $this->invitedAt;
