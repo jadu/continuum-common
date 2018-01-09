@@ -110,22 +110,6 @@ class OrganisationMembership implements OrganisationMembershipInterface
     /**
      * {@inheritdoc}
      */
-    public function getUserReference()
-    {
-        return $this->userReference;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setUserReference($userReference)
-    {
-        $this->userReference = $userReference;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getEmail()
     {
         return $this->email;

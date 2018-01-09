@@ -86,7 +86,6 @@ class Organisation implements OrganisationInterface
         $this->setCreatedAt(new DateTime());
         $this->setUpdatedAt(new DateTime());
         $this->members = new ArrayCollection();
-        $this->invitedMembers = new ArrayCollection();
     }
 
     /**
