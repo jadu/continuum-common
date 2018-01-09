@@ -7,7 +7,7 @@ use Jadu\ContinuumCommon\Address\Contract\AddressInterface;
 use Jadu\ContinuumCommon\Address\Formatter\AddressSummaryFormatter;
 
 /**
- * Class Address
+ * Class Address.
  *
  * @author Jadu Ltd.
  */

@@ -65,6 +65,7 @@ interface OrganisationInterface extends HydratableOrganisationInterface
      * @return string
      */
     public function getCompanyRegistrationNumber();
+
     /**
      * @return string
      */

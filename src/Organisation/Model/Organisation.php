@@ -7,7 +7,6 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Jadu\ContinuumCommon\Address\Contract\AddressInterface;
 use Jadu\ContinuumCommon\Organisation\Contract\OrganisationInterface;
 use Jadu\ContinuumCommon\Organisation\Contract\OrganisationMembershipInterface;
-use Jadu\ContinuumCommon\Organisation\Contract\OrganisationMembershipInviteInterface;
 
 /**
  * Class Organisation.
