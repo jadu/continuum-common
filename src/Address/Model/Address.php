@@ -2,80 +2,113 @@
 
 namespace Jadu\ContinuumCommon\Address\Model;
 
+use DateTime;
 use Jadu\ContinuumCommon\Address\Contract\AddressInterface;
 use Jadu\ContinuumCommon\Address\Formatter\AddressSummaryFormatter;
 
+/**
+ * Class Address.
+ *
+ * @author Jadu Ltd.
+ */
 class Address implements AddressInterface
 {
     /**
      * @var string
      */
-    private $paon;
+    protected $paon;
 
     /**
      * @var string
      */
-    private $saon;
+    protected $saon;
 
     /**
      * @var string
      */
-    private $street;
+    protected $street;
 
     /**
      * @var string
      */
-    private $locality;
+    protected $locality;
 
     /**
      * @var string
      */
-    private $town;
+    protected $town;
 
     /**
      * @var string
      */
-    private $postTown;
+    protected $postTown;
 
     /**
      * @var string
      */
-    private $postCode;
+    protected $postCode;
 
     /**
      * @var string
      */
-    private $type;
+    protected $type;
 
     /**
      * @var string
      */
-    private $administrativeArea;
+    protected $administrativeArea;
 
     /**
      * @var int
      */
-    private $easting;
+    protected $easting;
 
     /**
      * @var int
      */
-    private $northing;
+    protected $northing;
 
     /**
      * @var string
      */
-    private $uprn;
+    protected $uprn;
 
     /**
      * @var string
      */
-    private $usrn;
+    protected $usrn;
 
     /**
      * @var string
      */
-    private $externalReference;
+    protected $externalReference;
+
+    /**
+     * @var string
+     */
+    protected $reference;
+
+    /**
+     * @var DateTime
+     */
+    protected $createdAt;
+
+    /**
+     * @var DateTime
+     */
+    protected $updatedAt;
+
+    /**
+     * @var int
+     */
+    protected $version;
+
+    public function __construct()
+    {
+        $this->setCreatedAt(new DateTime());
+        $this->setUpdatedAt(new DateTime());
+        $this->version = 1;
+    }
 
     /**
      * {@inheritdoc}
@@ -321,5 +354,69 @@ class Address implements AddressInterface
     public function getSummary()
     {
         return AddressSummaryFormatter::generateFromAddress($this);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getReference()
+    {
+        return $this->reference;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setReference($reference)
+    {
+        $this->reference = $reference;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setCreatedAt(DateTime $createdAt)
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setUpdatedAt(DateTime $updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setVersion($version)
+    {
+        $this->version = $version;
     }
 }
