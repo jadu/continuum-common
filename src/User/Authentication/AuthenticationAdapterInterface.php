@@ -30,7 +30,7 @@ interface AuthenticationAdapterInterface
 
     public function getUpdatePasswordURL();
 
-    public function initSession();
+    public function refreshSession();
 
     public function performLogout();
 
