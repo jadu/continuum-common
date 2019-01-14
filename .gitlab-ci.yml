@@ -1,25 +1,19 @@
 before_script:
+  - docker-php-ext-enable zip
   - composer install
-
-test:PHP-5.5:
-  image: tetraweb/php:5.5
-  script:
-    - vendor/bin/phpunit
 
 test:PHP-5.6:
   image: tetraweb/php:5.6
   script:
     - vendor/bin/phpunit
-    - vendor/bin/php-cs-fixer --dry-run -v fix
 
 test:PHP-7.0:
   image: tetraweb/php:7.0
   script:
-    - vendor/bin/phpunit
-    - vendor/bin/php-cs-fixer --dry-run -v fix
+    - phpdbg -qrr vendor/bin/phpunit --coverage-text --colors=never
 
 test:PHP-7.1:
   image: tetraweb/php:7.1
   script:
-    - vendor/bin/phpunit
+    - phpdbg -qrr vendor/bin/phpunit --coverage-text --colors=never
     - vendor/bin/php-cs-fixer --dry-run -v fix
