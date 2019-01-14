@@ -5,15 +5,15 @@ before_script:
 test:PHP-5.6:
   image: tetraweb/php:5.6
   script:
-    - vendor/bin/phpunit --coverage-text --colors=never
+    - phpdbg -qrr vendor/bin/phpunit --coverage-text --colors=never
 
 test:PHP-7.0:
   image: tetraweb/php:7.0
   script:
-    - vendor/bin/phpunit --coverage-text --colors=never
+    - phpdbg -qrr vendor/bin/phpunit --coverage-text --colors=never
 
 test:PHP-7.1:
   image: tetraweb/php:7.1
   script:
-    - vendor/bin/phpunit --coverage-text --colors=never
+    - phpdbg -qrr vendor/bin/phpunit --coverage-text --colors=never
     - vendor/bin/php-cs-fixer --dry-run -v fix
