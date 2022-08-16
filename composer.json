@@ -20,5 +20,10 @@
             "Jadu\\ContinuumCommon\\Tests\\": "tests/",
             "": "src"
         }
+    },
+    "config": {
+        "platform": {
+            "php": "7.2.5"
+        }
     }
 }
