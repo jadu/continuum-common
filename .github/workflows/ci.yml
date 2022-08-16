@@ -33,7 +33,7 @@ jobs:
       - name: Run php-cs-fixer
         run: vendor/bin/php-cs-fixer --dry-run -v fix
 
-  test_7.2:
+  test_72:
     runs-on: ubuntu-latest
     container:
       image: lorisleiva/laravel-docker:7.2
