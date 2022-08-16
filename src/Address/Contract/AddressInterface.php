@@ -9,12 +9,12 @@ interface AddressInterface extends FormattableAddressInterface, HydratableAddres
     /**
      * @var string
      */
-    const TYPE_STREET = 'street';
+    public const TYPE_STREET = 'street';
 
     /**
      * @var string
      */
-    const TYPE_PROPERTY = 'property';
+    public const TYPE_PROPERTY = 'property';
 
     /**
      * Get the address reference.

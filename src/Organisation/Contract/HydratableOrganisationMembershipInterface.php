@@ -26,23 +26,11 @@ interface HydratableOrganisationMembershipInterface
      */
     public function setRole($role);
 
-    /**
-     * @param OrganisationInterface $organisation
-     */
     public function setOrganisation(OrganisationInterface $organisation);
 
-    /**
-     * @param DateTime $createdAt
-     */
     public function setCreatedAt(DateTime $createdAt);
 
-    /**
-     * @param DateTime $updatedAt
-     */
     public function setUpdatedAt(DateTime $updatedAt);
 
-    /**
-     * @param DateTime $invitedAt
-     */
     public function setInvitedAt(DateTime $invitedAt);
 }

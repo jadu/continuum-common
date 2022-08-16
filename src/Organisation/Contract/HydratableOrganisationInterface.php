@@ -21,14 +21,8 @@ interface HydratableOrganisationInterface
      */
     public function setReference($reference);
 
-    /**
-     * @param DateTime $createdAt
-     */
     public function setCreatedAt(DateTime $createdAt);
 
-    /**
-     * @param DateTime $updatedAt
-     */
     public function setUpdatedAt(DateTime $updatedAt);
 
     /**
@@ -46,14 +40,8 @@ interface HydratableOrganisationInterface
      */
     public function setTelephoneSecondary($telephoneSecondary);
 
-    /**
-     * @param AddressInterface $address
-     */
     public function setAddress(AddressInterface $address);
 
-    /**
-     * @param OrganisationMembershipInterface $member
-     */
     public function addMember(OrganisationMembershipInterface $member);
 
     /**
