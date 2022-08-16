@@ -31,7 +31,7 @@ class AddressSummaryFormatter
     /**
      * @param string $part
      */
-    public static function addPart(array & $lines, $part)
+    public static function addPart(array &$lines, $part)
     {
         $last = count($lines) - 1;
         if (!empty($lines) &&

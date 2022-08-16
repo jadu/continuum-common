@@ -10,7 +10,7 @@ class OrderingFormatter
      * @param array $results
      * @param string $property
      */
-    public static function order(& $results = [], $property)
+    public static function order(&$results = [], $property)
     {
         uasort(
             $results,
