@@ -60,6 +60,6 @@ class OrderingFormatterTest extends AbstractTestCase
             $ordered[] = $address->label;
         }
 
-        $this->assertEquals($expected, $ordered);
+        static::assertEquals($expected, $ordered);
     }
 }

@@ -1,0 +1,53 @@
+name: CI
+
+# Controls when the action will run.
+on:
+  workflow_dispatch:
+  push:
+    branches: [ tests ]
+
+  pull_request:
+    branches: [ master ]
+
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  test_74:
+    runs-on: ubuntu-latest
+    container:
+      image: lorisleiva/laravel-docker:7.4
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Composer dependencies
+        run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+
+      - name: Run Testsuite
+        run: phpdbg -qrr vendor/bin/phpunit --coverage-text --colors=never
+
+      - name: Run php-cs-fixer
+        run: vendor/bin/php-cs-fixer --dry-run -v fix
+
+  test_72:
+    runs-on: ubuntu-latest
+    container:
+      image: lorisleiva/laravel-docker:7.2
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Composer dependencies
+        run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+
+      - name: Run Testsuite
+        run: phpdbg -qrr vendor/bin/phpunit --coverage-text --colors=never
+
+      - name: Run php-cs-fixer
+        run: vendor/bin/php-cs-fixer --dry-run -v fix

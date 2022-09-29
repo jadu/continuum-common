@@ -8,8 +8,6 @@ use Jadu\ContinuumCommon\Address\Contract\FormattableAddressInterface;
 class AddressSummaryFormatter
 {
     /**
-     * @param FormattableAddressInterface $address
-     *
      * @return string
      */
     public static function generateFromAddress(FormattableAddressInterface $address)
@@ -31,7 +29,6 @@ class AddressSummaryFormatter
     }
 
     /**
-     * @param array $lines
      * @param string $part
      */
     public static function addPart(array &$lines, $part)

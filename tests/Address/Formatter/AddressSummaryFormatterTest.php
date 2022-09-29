@@ -20,7 +20,7 @@ class AddressSummaryFormatterTest extends AbstractTestCase
 
         $expected = '12 Main Street, Leicester, LE1 3EN';
 
-        $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
+        static::assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
     }
 
     public function testGenerateFromAddressHandlesSaon()
@@ -34,7 +34,7 @@ class AddressSummaryFormatterTest extends AbstractTestCase
 
         $expected = 'Flat 7, Main Street, Leicester, LE1 3EN';
 
-        $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
+        static::assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
     }
 
     public function testGenerateFromAddressHandlesSaonAndPaon()
@@ -49,7 +49,7 @@ class AddressSummaryFormatterTest extends AbstractTestCase
 
         $expected = 'Flat 7, 12 Main Street, Leicester, LE1 3EN';
 
-        $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
+        static::assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
     }
 
     public function testGenerateFromAddressHandlesNumericSaonAndPaon()
@@ -64,7 +64,7 @@ class AddressSummaryFormatterTest extends AbstractTestCase
 
         $expected = '2 The Cottages, Moseley Road, Hallow, WR2 6NJ';
 
-        $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
+        static::assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
     }
 
     public function testGenerateFromAddressHandlesOtherPaon()
@@ -78,7 +78,7 @@ class AddressSummaryFormatterTest extends AbstractTestCase
 
         $expected = '12a Main Street, Leicester, LE1 3EN';
 
-        $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
+        static::assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
     }
 
     public function testGenerateFromAddressHandlesSaonAndNonNumericPaon()
@@ -93,7 +93,7 @@ class AddressSummaryFormatterTest extends AbstractTestCase
 
         $expected = 'Flat 7, Highrise House, Main Street, Leicester, LE1 3EN';
 
-        $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
+        static::assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
     }
 
     public function testGenerateFromAddressAppliesTitleCaseCorrectly()
@@ -108,7 +108,7 @@ class AddressSummaryFormatterTest extends AbstractTestCase
 
         $expected = 'Flat Ee7, My House, Main Street, Leicester, LE1 3EN';
 
-        $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
+        static::assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
     }
 
     public function testGenerateFromAddressAppliesTitleCaseCorrectlyForAllCapitals()
@@ -123,7 +123,7 @@ class AddressSummaryFormatterTest extends AbstractTestCase
 
         $expected = 'Flat Ee7, My House, Main Street, Leicester, LE1 3EN';
 
-        $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
+        static::assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
     }
 
     public function testGenerateStreetAddressDoesntIncludeHouseNumbers()
@@ -138,6 +138,6 @@ class AddressSummaryFormatterTest extends AbstractTestCase
 
         $expected = 'Main Street, Leicester, LE1 3EN';
 
-        $this->assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
+        static::assertEquals($expected, AddressSummaryFormatter::generateFromAddress($address));
     }
 }

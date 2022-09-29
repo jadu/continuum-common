@@ -111,14 +111,8 @@ interface HydratableAddressInterface
      */
     public function setReference($reference);
 
-    /**
-     * @param DateTime $createdAt
-     */
     public function setCreatedAt(DateTime $createdAt);
 
-    /**
-     * @param DateTime $updatedAt
-     */
     public function setUpdatedAt(DateTime $updatedAt);
 
     /**

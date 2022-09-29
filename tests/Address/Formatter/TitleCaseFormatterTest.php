@@ -12,7 +12,7 @@ class TitleCaseFormatterTest extends AbstractTestCase
      */
     public function testFormat($text, $expected)
     {
-        $this->assertEquals($expected, TitleCaseFormatter::format($text));
+        static::assertEquals($expected, TitleCaseFormatter::format($text));
     }
 
     public function testFormatDataProvider()
